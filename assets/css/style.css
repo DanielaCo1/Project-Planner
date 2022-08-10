@@ -52,4 +52,11 @@ table {
   border-spacing: 0;
 }
 
+.button {
+  background-color: #F2A71B;
+  border: none;
+  padding: 9px;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
