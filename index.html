@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="project.js"></script>
-</head>
-<body>
-    <main>
-        <section class="navButton">
-            <button class="button">Ajouter</button>
-            <select class="button button--icon button--icone--down">
-                <option value="toDo">To Do</option>
-                <option value="doing">Doing</option>
-                <option value="done">Done</option>
-            </select>
-            <button class="button button--icon button--icon--sens">Name</button>
-            <button class="button button--icon button--icon--sens">Time remaning</button>
-            <button class="button button--icon button--icon--sens">Important</button>
-        </section>
-        <section id="taskCardList" class="taskCardList">
-
-        </section>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script defer src="project.js"></script>
+	</head>
+	<body>
+		<main>
+			<section class="navButton">
+				<button class="button">Ajouter</button>
+				<select class="button button--icon button--icone--down">
+					<option value="toDo">To Do</option>
+					<option value="doing">Doing</option>
+					<option value="done">Done</option>
+				</select>
+				<button class="button button--icon button--icon--sens">
+					Name
+				</button>
+				<button class="button button--icon button--icon--sens">
+					Time remaning
+				</button>
+				<button class="button button--icon button--icon--sens">
+					Important
+				</button>
+			</section>
+			<section id="taskCardList" class="taskCardList"></section>
+		</main>
+		<section class="modalBox">
+			<form>
+				<div>
+					<label for="TaskName">TaskName</label>
+					<input type="text" />
+				</div>
+				<div>
+					<label for="EndDate">End Date</label>
+					<input type="date" />
+				</div>
+				<div>
+					<label for="EndTime">End Date</label>
+					<input type="time" />
+				</div>
+				<div>
+					<label for="TaskName">Description</label>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+				<div>
+					<label for="TaskName">Importance</label>
+					<input type="checkbox" />
+				</div>
+				<button type="submit">Ajouter</button>
+			</form>
+		</section>
+	</body>
 </html>
