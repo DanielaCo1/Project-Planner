@@ -11,7 +11,7 @@
 	<body>
 		<main>
 			<section class="navButton">
-				<button class="button">Ajouter</button>
+				<button id="btnAddTask" class="button">Ajouter</button>
 				<select class="button button--icon button--icone--down">
 					<option value="toDo">To Do</option>
 					<option value="doing">Doing</option>
@@ -29,27 +29,32 @@
 			</section>
 			<section id="taskCardList" class="taskCardList"></section>
 		</main>
-		<section class="modalBox">
-			<form class="form">
+		<section id="modalBox" class="modalBox">
+			<form id="form" class="form">
 				<div class="form__inputBox">
-					<label for="TaskName">TaskName</label>
-					<input type="text" />
+					<label for="taskName">TaskName</label>
+					<input id="taskName" name="taskName" type="text" />
 				</div>
 				<div class="form__inputBox">
-					<label for="EndDate">End Date</label>
-					<input type="date" />
+					<label for="endDate">End Date</label>
+					<input id="endDate" name="endDate" type="date" />
 				</div>
 				<div class="form__inputBox">
-					<label for="EndTime">End Time</label>
-					<input type="time" />
+					<label for="endTime">End Time</label>
+					<input id="endTime" name="endTime" type="time" />
 				</div>
 				<div class="form__inputBox">
-					<label for="TaskName">Description</label>
-					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<label for="description">Description</label>
+					<textarea
+						name="description"
+						id="description"
+						cols="30"
+						rows="10"
+					></textarea>
 				</div>
 				<div class="form__inputBox">
-					<label for="TaskName">Importance</label>
-					<input type="checkbox" />
+					<label for="important">Importance</label>
+					<input name="important" id="important" type="checkbox" />
 				</div>
 				<button type="submit">Ajouter</button>
 				<button type="reset">Cancel</button>
