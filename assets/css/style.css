@@ -53,10 +53,32 @@ table {
 }
 
 .button {
-  background-color: #F2A71B;
+  background-color: #0096C7;
   border: none;
   padding: 9px;
   border-radius: 10px;
+}
+.button--icon {
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+}
+.button--icon--up {
+  background-image: url("../img/up.svg");
+  background-size: 15px;
+}
+.button--icon--down {
+  background-image: url("../img/down.svg");
+  background-size: 15px;
+}
+.button--icon--sens {
+  background-image: url("../img/sens.svg");
+  background-size: 20px;
+}
+.button--icon--trash {
+  background-image: url("../img/trash.svg");
+  background-size: 25px;
+  padding-right: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

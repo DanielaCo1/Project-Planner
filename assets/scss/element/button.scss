@@ -6,17 +6,31 @@
 
 
     &--icon{
-        
-        &--up{
+           
+            background-repeat:no-repeat;
+            background-position: right;
+            padding-right: 20px;
             
+
+        &--up{
+            background-image: url('../img/up.svg');  
+            background-size: 15px; 
         }
 
         &--down{
-            
+            background-image: url('../img/down.svg');     
+            background-size: 15px;     
         }
 
-        &--order{
-            
+        &--sens{
+            background-image: url('../img/sens.svg');
+            background-size: 20px;
+        }
+
+        &--trash{
+            background-image: url('../img/trash.svg');
+            background-size:25px ; 
+            padding-right:25px;
         }
     }
 }
