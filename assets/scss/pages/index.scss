@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px ;
+    margin: 0 auto;
+}
+
+.navButton {
+    display: flex;
+    justify-content: space-between;
+}

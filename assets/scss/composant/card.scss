@@ -1,5 +1,12 @@
 .taskCardList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 450px;
+    background-color: $color-primary;
+    padding: 10px;
+    border-radius: 18px;
+    
 }
 
 
@@ -12,6 +19,7 @@
     border: 2px solid black;
     border-radius: 18px;
     padding: 18px;
+    background-color: white;
    
 
     

@@ -56,6 +56,10 @@ table {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #1F2020;
+}
+
 .button {
   background-color: #0096C7;
   border: none;
@@ -94,7 +98,13 @@ table {
 }
 
 .taskCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 450px;
+  background-color: #0096C7;
+  padding: 10px;
+  border-radius: 18px;
 }
 
 .taskCard {
@@ -104,6 +114,7 @@ table {
   border: 2px solid black;
   border-radius: 18px;
   padding: 18px;
+  background-color: white;
 }
 .taskCard__main {
   display: flex;
@@ -127,6 +138,19 @@ table {
   gap: 18px;
 }
 .taskCard__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 450px;
+  margin: 0 auto;
+}
+
+.navButton {
   display: flex;
   justify-content: space-between;
 }
