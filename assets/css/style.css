@@ -52,11 +52,16 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .button {
   background-color: #0096C7;
   border: none;
   padding: 9px;
   border-radius: 10px;
+  display: inline-block;
 }
 .button--icon {
   background-repeat: no-repeat;
@@ -79,6 +84,51 @@ table {
   background-image: url("../img/trash.svg");
   background-size: 25px;
   padding-right: 25px;
+}
+.button--icon--solo {
+  height: 18px;
+  padding: 0;
+  width: 18px;
+  display: block;
+  background-color: transparent;
+}
+
+.taskCardList {
+  width: 450px;
+}
+
+.taskCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 2px solid black;
+  border-radius: 18px;
+  padding: 18px;
+}
+.taskCard__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.taskCard__main__right {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.taskCard__title {
+  font-weight: 700;
+}
+.taskCard__cd {
+  font-weight: 700;
+}
+.taskCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.taskCard__buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

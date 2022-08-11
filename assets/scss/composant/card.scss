@@ -1,0 +1,53 @@
+.taskCardList{
+    width: 450px;
+}
+
+
+
+
+.taskCard{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border: 2px solid black;
+    border-radius: 18px;
+    padding: 18px;
+   
+
+    
+
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__right{
+            display: flex;
+            gap: 9px;
+            align-items: center;
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+    }
+    &__cd{
+        font-weight: 700; 
+
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+    }
+    &__description{
+
+    }
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+

@@ -3,6 +3,10 @@
     border:none;
     padding: 9px;
     border-radius: 10px;
+    display:inline-block;
+
+    
+    
 
 
     &--icon{
@@ -19,7 +23,9 @@
 
         &--down{
             background-image: url('../img/down.svg');     
-            background-size: 15px;     
+            background-size: 15px;
+            
+             
         }
 
         &--sens{
@@ -32,5 +38,15 @@
             background-size:25px ; 
             padding-right:25px;
         }
+
+        &--solo{
+            height: 18px;
+            padding: 0;
+            width: 18px;
+            display: block;
+            background-color: transparent;
+        }
     }
 }
+
+
