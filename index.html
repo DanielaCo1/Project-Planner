@@ -30,28 +30,29 @@
 			<section id="taskCardList" class="taskCardList"></section>
 		</main>
 		<section class="modalBox">
-			<form>
-				<div>
+			<form class="form">
+				<div class="form__inputBox">
 					<label for="TaskName">TaskName</label>
 					<input type="text" />
 				</div>
-				<div>
+				<div class="form__inputBox">
 					<label for="EndDate">End Date</label>
 					<input type="date" />
 				</div>
-				<div>
-					<label for="EndTime">End Date</label>
+				<div class="form__inputBox">
+					<label for="EndTime">End Time</label>
 					<input type="time" />
 				</div>
-				<div>
+				<div class="form__inputBox">
 					<label for="TaskName">Description</label>
 					<textarea name="" id="" cols="30" rows="10"></textarea>
 				</div>
-				<div>
+				<div class="form__inputBox">
 					<label for="TaskName">Importance</label>
 					<input type="checkbox" />
 				</div>
 				<button type="submit">Ajouter</button>
+				<button type="reset">Cancel</button>
 			</form>
 		</section>
 	</body>

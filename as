@@ -118,29 +118,6 @@ body {
     display: flex;
     justify-content: space-between; }
 
-.modalBox {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(31, 32, 32, 0.5);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(6px);
-  visibility: hidden; }
-  .modalBox .form {
-    position: absolute;
-    background-color: #0096C7;
-    padding: 18px;
-    border-radius: 18px; }
-    .modalBox .form__inputBox {
-      display: flex;
-      flex-direction: column; }
-      .modalBox .form__inputBox input {
-        border-radius: 18px;
-        padding: 5px; }
-
 main {
   display: flex;
   flex-direction: column;
@@ -152,4 +129,4 @@ main {
   display: flex;
   justify-content: space-between; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=as.map */
