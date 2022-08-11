@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="project.js"></script>
 </head>
 <body>
     <main>
         <section class="navButton">
+            <button class="button">Ajouter</button>
             <select class="button button--icon button--icone--down">
                 <option value="toDo">To Do</option>
                 <option value="doing">Doing</option>
@@ -19,63 +21,8 @@
             <button class="button button--icon button--icon--sens">Time remaning</button>
             <button class="button button--icon button--icon--sens">Important</button>
         </section>
-        <section class="taskCardList">
-            <section class="taskCard">
-                <div class="taskCard__main">
-                    <h2 class="taskCard__title">My first task</h2>
-                    <div class="taskCard__main__right">
-                        <span class="button taskCard__cd">5 jours</span>
-                        <button class="button button--icon button--icon--solo button--icon--down"></button>
-                    </div>
-                </div>
-                <div class="taskCard__content">
-                    <p class="taskCard__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit accusamus ullam consequuntur quasi pariatur illo odit neque facere reprehenderit quo et, cumque, fuga ad magnam eos quam architecto? Quos, fugiat?
-                    </p>
-                    <div class="taskCard__buttons">
-                        <button class="button button--icon button--icon--down">To do</button>
-                        <button class="button">Delete</button>
-                        <button class="button button">Important <input type="checkbox"></button>
-                    </div>
-                </div>
-            </section>
-            <section class="taskCard">
-                <div class="taskCard__main">
-                    <h2 class="taskCard__title">My first task</h2>
-                    <div class="taskCard__main__right">
-                        <span class="button taskCard__cd">5 jours</span>
-                        <button class="button button--icon button--icon--solo button--icon--down"></button>
-                    </div>
-                </div>
-                <div class="taskCard__content">
-                    <p class="taskCard__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit accusamus ullam consequuntur quasi pariatur illo odit neque facere reprehenderit quo et, cumque, fuga ad magnam eos quam architecto? Quos, fugiat?
-                    </p>
-                    <div class="taskCard__buttons">
-                        <button class="button button--icon button--icon--down">To do</button>
-                        <button class="button">Delete</button>
-                        <button class="button button">Important <input type="checkbox"></button>
-                    </div>
-                </div>
-            </section><section class="taskCard">
-            <div class="taskCard__main">
-                <h2 class="taskCard__title">My first task</h2>
-                <div class="taskCard__main__right">
-                    <span class="button taskCard__cd">5 jours</span>
-                    <button class="button button--icon button--icon--solo button--icon--down"></button>
-                </div>
-            </div>
-            <div class="taskCard__content">
-                <p class="taskCard__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit accusamus ullam consequuntur quasi pariatur illo odit neque facere reprehenderit quo et, cumque, fuga ad magnam eos quam architecto? Quos, fugiat?
-                </p>
-                <div class="taskCard__buttons">
-                    <button class="button button--icon button--icon--down">To do</button>
-                    <button class="button">Delete</button>
-                    <button class="button button">Important <input type="checkbox"></button>
-                </div>
-            </div>
-        </section>
+        <section id="taskCardList" class="taskCardList">
+
         </section>
     </main>
 </body>
