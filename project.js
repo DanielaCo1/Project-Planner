@@ -107,6 +107,7 @@ form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	console.log(e);
 	if (formIsValid()) {
+		//Ajouter la task
 		closeForm();
 	} else {
 		alert("Le formlaire n'est pas valide");
@@ -126,12 +127,12 @@ function closeForm() {
 }
 
 //Vérifie si un formulaire est valide
-function formIsValid(datas) {
+function formIsValid() {
 	let taskNameInput = document.querySelector("#taskName").value;
 	let endDateInput = document.querySelector("#endDate").value;
 	let endTimeInput = document.querySelector("#endTime").value;
 	let descriptionInput = document.querySelector("#description").value;
-	console.log(descriptionInput);
+	
 
 	return false;
 }
