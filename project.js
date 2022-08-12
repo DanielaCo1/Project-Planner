@@ -8,22 +8,36 @@ class Planner {
 	//Ajoute une tache dans la taskList
 	add(task) {
 		//Mettre task dans taskList
+        task.id = Date.now();
 		this.taskList.push(task);
 	}
+
+    calculTimeRemaining(endDate){
+        // endDate =  Date();
+        // let now =  new Date().getTime();
+        // let diff = Math.abs(endDate - now);
+        // console.log(diff);
+        console.log(Date()-  Date(endDate));
+        
+        
+    }
 
 	//Affiche la liste des tasks
 	list() {
 		//Afficher toutes les taches dans la page web
 		let taskCardListElm = document.querySelector("#taskCardList");
 
+
+
 		taskCardListElm.innerHTML = this.taskList
 			.map((task) => {
 				return `
                     <section class="taskCard">
+
                         <div class="taskCard__main">
                             <h2 class="taskCard__title">${task.name}</h2>
                             <div class="taskCard__main__right">
-                                <span class="button taskCard__cd">${task.endDate.toLocaleDateString()}</span>
+                                <span class="button taskCard__cd">${this.calculTimeRemaining(task.endDate)}</span>
                                 <button class="button button--icon button--icon--solo button--icon--down"></button>
                             </div>
                         </div>
@@ -43,8 +57,8 @@ class Planner {
 										task.status == "done" ? "selected" : ""
 									}>Done </option>
                                 </select>
-                                <button class="button">Delete</button>
-                                <button class="button button">
+                                <button class="btnDelete button" data-taskid="${task.id}">Delete</button>
+                                <button class="button">
                                     Important 
                                     <input type="checkbox" ${
 										task.important ? "checked" : ""
@@ -56,39 +70,56 @@ class Planner {
                 `;
 			})
 			.join("");
+
+// Add element delete
+let deleteBtn = document.createElement("button");
+deleteBtn.classList.add("button");
+deleteBtn.innerHTML = "Delete";
+
+
+
+let btnDeleteList = document.querySelectorAll(".btnDelete");
+btnDeleteList.forEach(btn=>{
+    btn.addEventListener("click",e=>{
+        console.log(e.target.dataset.taskid);
+        let idToDelete = e.target.dataset.taskid;//dataset= accesso a taskid
+
+        let index = planner.taskList.findIndex( elt=> elt.id == idToDelete);//se l'elem è = ad idDeletelm 
+        planner.deleteTask(index);
+        planner.list();
+        
+
+    })
+    console.log(btn);
+})
+
+
 	}
+
+    deleteTask(index){
+        this.taskList.splice(index, 1)
+    }
+
 }
-//------------------------------------------
 
-let task1 = {
-	name: "My first task",
-	endDate: new Date(),
-	description: "descriprion de la tache 1",
-	status: "toDo",
-	important: true,
-};
-let task2 = {
-	name: "My second task",
-	endDate: new Date(),
-	description: "descriprion de la seconde tache",
-	status: "done",
-	important: false,
-};
+function addDeleteEvent(e){
+    console.log(e);
+}
 
-let task3 = {
-	name: "My third task",
-	endDate: new Date(),
-	description: "descriprion de la 3eme tache",
-	status: "doing",
-	important: true,
-};
 
 let planner = new Planner();
+let task1 = {
+    name: "My first task",
+    endDate: new Date(),
+    description: "descriprion de la tache 1",
+    status: "toDo",
+    important: true,
+};
+
 planner.add(task1);
-planner.add(task2);
-planner.add(task3);
 
 planner.list();
+
 
 //----------------------------------
 // Input Form
@@ -106,13 +137,40 @@ let form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	console.log(e);
-	if (formIsValid()) {
-		//Ajouter la task
-		closeForm();
-	} else {
-		alert("Le formlaire n'est pas valide");
-	}
+
+    let taskNameInput = document.querySelector("#taskName").value;
+	let endDateInput = document.querySelector("#endDate").value;
+	let endTimeInput = document.querySelector("#endTime").value;
+	let descriptionInput = document.querySelector("#description").value;
+    let importantInput = document.querySelector("#important").checked;
+    console.log(importantInput);
+	if(
+        taskNameInput !=  "" &&
+        endDateInput != "" &&
+        endTimeInput != "" &&
+        descriptionInput != ""
+        ) {
+            closeForm();
+           
+            let task = {
+                name : taskNameInput,
+                endDate: new Date(endDateInput + "T"+ endTimeInput),
+                description: descriptionInput,
+                status: "toDo",
+                important: importantInput,
+            }; 
+            planner.add(task);
+            planner.list();
+            }
+        
+    else {
+        alert("Le formlaire n'est pas valide");
+    }     
+	
 });
+
+//Add function Delete
+
 
 //Add event on reset btn
 form.addEventListener("reset", (e) => {
@@ -126,13 +184,3 @@ function closeForm() {
 	modalBoxElt.style.visibility = "hidden";
 }
 
-//Vérifie si un formulaire est valide
-function formIsValid() {
-	let taskNameInput = document.querySelector("#taskName").value;
-	let endDateInput = document.querySelector("#endDate").value;
-	let endTimeInput = document.querySelector("#endTime").value;
-	let descriptionInput = document.querySelector("#description").value;
-	
-
-	return false;
-}

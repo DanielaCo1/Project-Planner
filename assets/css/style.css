@@ -20,66 +20,82 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #1F2020; }
+  background-color: #1F2020;
+}
 
 .button {
   background-color: #0096C7;
   border: none;
   padding: 9px;
   border-radius: 10px;
-  display: inline-block; }
-  .button--icon {
-    background-repeat: no-repeat;
-    background-position: right;
-    padding-right: 20px; }
-    .button--icon--up {
-      background-image: url("../img/up.svg");
-      background-size: 15px; }
-    .button--icon--down {
-      background-image: url("../img/down.svg");
-      background-size: 15px; }
-    .button--icon--sens {
-      background-image: url("../img/sens.svg");
-      background-size: 20px; }
-    .button--icon--trash {
-      background-image: url("../img/trash.svg");
-      background-size: 25px;
-      padding-right: 25px; }
-    .button--icon--solo {
-      height: 18px;
-      padding: 0;
-      width: 18px;
-      display: block;
-      background-color: transparent; }
+  display: inline-block;
+}
+.button--icon {
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+}
+.button--icon--up {
+  background-image: url("../img/up.svg");
+  background-size: 15px;
+}
+.button--icon--down {
+  background-image: url("../img/down.svg");
+  background-size: 15px;
+}
+.button--icon--sens {
+  background-image: url("../img/sens.svg");
+  background-size: 20px;
+}
+.button--icon--trash {
+  background-image: url("../img/trash.svg");
+  background-size: 25px;
+  padding-right: 25px;
+}
+.button--icon--solo {
+  height: 18px;
+  padding: 0;
+  width: 18px;
+  display: block;
+  background-color: transparent;
+}
 
 .taskCardList {
   display: flex;
@@ -88,7 +104,8 @@ body {
   width: 450px;
   background-color: #0096C7;
   padding: 10px;
-  border-radius: 18px; }
+  border-radius: 18px;
+}
 
 .taskCard {
   display: flex;
@@ -97,26 +114,33 @@ body {
   border: 2px solid black;
   border-radius: 18px;
   padding: 18px;
-  background-color: white; }
-  .taskCard__main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .taskCard__main__right {
-      display: flex;
-      gap: 9px;
-      align-items: center; }
-  .taskCard__title {
-    font-weight: 700; }
-  .taskCard__cd {
-    font-weight: 700; }
-  .taskCard__content {
-    display: flex;
-    flex-direction: column;
-    gap: 18px; }
-  .taskCard__buttons {
-    display: flex;
-    justify-content: space-between; }
+  background-color: white;
+}
+.taskCard__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.taskCard__main__right {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.taskCard__title {
+  font-weight: 700;
+}
+.taskCard__cd {
+  font-weight: 700;
+}
+.taskCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.taskCard__buttons {
+  display: flex;
+  justify-content: space-between;
+}
 
 .modalBox {
   position: fixed;
@@ -128,28 +152,34 @@ body {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(6px);
-  visibility: hidden; }
-  .modalBox .form {
-    position: absolute;
-    background-color: #0096C7;
-    padding: 18px;
-    border-radius: 18px; }
-    .modalBox .form__inputBox {
-      display: flex;
-      flex-direction: column; }
-      .modalBox .form__inputBox input {
-        border-radius: 18px;
-        padding: 5px; }
+  visibility: hidden;
+}
+.modalBox .form {
+  position: absolute;
+  background-color: #0096C7;
+  padding: 18px;
+  border-radius: 18px;
+}
+.modalBox .form__inputBox {
+  display: flex;
+  flex-direction: column;
+}
+.modalBox .form__inputBox input {
+  border-radius: 18px;
+  padding: 5px;
+}
 
 main {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 450px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .navButton {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 /*# sourceMappingURL=style.css.map */
